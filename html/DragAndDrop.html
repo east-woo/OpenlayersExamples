@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drag-and-Drop</title>
+    <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+    <script src="https://unpkg.com/elm-pep@1.0.6/dist/elm-pep.js"></script>
+    <!-- The lines below are only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=fetch,requestAnimationFrame,Element.prototype.classList,TextDecoder"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/3.18.3/minified.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/css/ol.css">
+    <style>
+        .map {
+            width: 100%;
+            height:400px;
+        }
+    </style>
+</head>
+<body>
+<div id="map" class="map"></div>
+<div><label><input type="checkbox" id="extractstyles" checked /> Extract styles from KML</label></div>
+<br />
+<div>
+    <a id="download" download></a>
+    Download samples:&nbsp;&nbsp;
+    <button id="download-gpx">GPX</button>
+    &nbsp;
+    <button id="download-geojson">GeoJSON</button>
+    &nbsp;
+    <button id="download-igc">IGC</button>
+    &nbsp;
+    <button id="download-kml">KML</button>
+    &nbsp;
+    <button id="download-topojson">TopoJSON</button>
+</div>
+<br />
+<div id="info">&nbsp;</div>
+<script src="../js/DragAndDrop.js"></script>
+</body>
+</html>

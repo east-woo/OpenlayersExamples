@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        /* reset */
+        html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, section, summary {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        img {
+            border: none;
+            vertical-align: top;
+        }
+
+        address {
+            font-style: normal;
+        }
+
+        button {
+            display: inline-block;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        input, button, a, select, option {
+            font-family: inherit;
+            font-size: inherit;
+        }
+
+        input[type="checkbox"] {
+            border: none !important;
+        }
+
+        /* for lte IE10 */
+        input[type="radio"] {
+            border: none !important;
+        }
+
+        /* for lte IE10 */
+        caption {
+            text-align: left;
+            margin-bottom: 7px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* common */
+        body, html, pre {
+            font-family: "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;
+            font-size: 14px;
+            color: #333;
+            letter-spacing: -0.045em !important;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .clearFix:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .hidden {
+            margin: 0;
+            padding: 0;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        .txt-center {
+            text-align: center;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #wrap {
+            padding-bottom: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 20px 0 10px;
+        }
+
+        table {
+            width: 98%;
+            margin: 20px auto 0;
+            border-top: 2px solid #787d81;
+        }
+
+        th {
+            background: #777f88;
+            color: #fff;
+        }
+
+        th, td {
+            height: 30px;
+            border-bottom: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th:first-child, td:first-child {
+            border-left: 0;
+        }
+    </style>
+    <title>서동우 openlayers sample examples</title>
+</head>
+<body>
+<div id="wrap">
+    <h1>서동우 openlayers sample examples</h1>
+    <table>
+        <caption>openlayers examples</caption>
+        <colgroup>
+            <col style="width:15%"/>
+            <col style="width:10%"/>
+            <col style="*"/>
+            <col style="*"/>
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col">업데이트일자</th>
+            <th scope="col">파일명</th>
+            <th scope="col">내용</th>
+            <th scope="col">학습내용</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td title="업데이트일자">2022-06-07</td>
+            <td title="파일명"><a href="./html/AccessibleMap.html" target="_blank">AccessibleMap.html</a></td>
+            <td title="내용">줌인 줌아웃 버튼 및 지도 띄우기 실습</td>
+            <td title="비고"></td>
+        </tr>
+        <tr>
+            <td title="업데이트일자">2022-06-07</td>
+            <td title="파일명"><a href="./html/AdvancedViewPositioning.html" target="_blank">AdvancedViewPositioning.html</a></td>
+            <td title="내용">이 예는 지도의 보기를 조정하여 기하 도형이나 좌표가 특정 픽셀 위치에 배치되도록 하는 방법을 보여줍니다. 위의 지도에는 뷰포트 내부에 적용된 위쪽, 오른쪽, 아래쪽 및 왼쪽 패딩이 있습니다. 뷰의 fit메서드는 동일한 패딩으로 뷰의 지오메트리를 맞추는 데 사용됩니다. 뷰의 centerOn방법은 특정 픽셀 위치(블랙박스의 중심)에 좌표(로잔)를 배치하는 데 사용됩니다</td>
+            <td title="비고">openlayers 스타일<br>
+                Fill : 벡터기능의 채우기 스타일을 설정<br>
+                Stroke: 벡터 기능에 대한 획 스타일 설정<br>
+                map.getView().getResolution(); 현재 해상도 가져옴<br>
+                minResolution :레이어 최소 해상도<br>
+                getCoordinates() : 좌표값 가져올 때 사용  </td></td>
+        </tr>
+        <tr>
+            <td title="업데이트일자">2022-06-08</td>
+            <td title="파일명"><a href="./html/AnimatedGIF.html" target="_blank">AnimatedGIF.html</a></td>
+            <td title="내용">애니메이션 gif 삽입</td>
+            <td title="비고">ol.source.Vector : 벡터 레이어에 대한 기능 소스<br>
+                ol.layer.Vector : 벡터데이터 렌더링 </td>
+        </tr>
+        <tr>
+            <td title="업데이트일자">2022-06-08</td>
+            <td title="파일명"><a href="./html/ArcGISRestFeatureService.html" target="_blank">ArcGIS REST Feature Service</a></td>
+            <td title="내용">restAPI 방식으로 레이어 호출</td>
+            <td title="비고">fromLonLat() :  경위도를 오픈스트리트맵의 좌표계로 간단히 변환<br>
+                getEventPixel() : 뷰포트 기준으로 이벤트의 지도 픽셀 위치를 반환
+        </tr>
+        <tr>
+            <td title="업데이트일자">2022-06-08</td>
+            <td title="파일명"><a href="./html/Attributions.html" target="_blank">Attributions</a></td>
+            <td title="내용">지도가 600px 이하일 시 저작자 모양이 변경</td>
+            <td title="비고"></td>
+        </tr>
+        <tr>
+            <td title="업데이트일자">2022-06-08</td>
+            <td title="파일명"><a href="./html/BandContrastStretch.html" target="_blank">BandContrastStretch</a></td>
+            <td title="내용">지도 RGB 색 변경</td>
+            <td title="비고">layer.updateStyleVariables()를 활용하여 모든 변수를 업데이트하고 다시 렌더링</td>
+        </tr>
+        <tr>
+            <td title="업데이트일자">2022-06-08</td>
+            <td title="파일명"><a href="./html/BingMaps.html" target="_blank">BingMaps</a></td>
+            <td title="내용">셀렉트박스로 지도 선택</td>
+            <td title="비고"></td>
+        </tr>
+        <tr>
+            <td title="업데이트일자">2022-06-08</td>
+            <td title="파일명"><a href="./html/BoxSelection.html" target="_blank">BoxSelection</a></td>
+            <td title="내용">셀렉트박스로 지도 선택</td>
+            <td title="비고"></td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <table>
+        <caption>추천받은 openlayers examples</caption>
+        <colgroup>
+            <col style="width:15%"/>
+            <col style="width:10%"/>
+            <col style="*"/>
+            <col style="*"/>
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col">업데이트일자</th>
+            <th scope="col">파일명</th>
+            <th scope="col">내용</th>
+            <th scope="col">학습내용</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td title="업데이트일자">2022-06-09</td>
+            <td title="파일명"><a href="./html/ClusteredFeatures.html" target="_blank">ClusteredFeatures.html</a></td>
+            <td title="내용">클러스터링 실습</td>
+            <td title="비고">duration : 지도를 줌하는 속도</td>
+        </tr>
+        <tr>
+            <td title="업데이트일자">2022-06-09</td>
+            <td title="파일명"><a href="./html/ViewAnimation.html" target="_blank">ViewAnimation.html</a></td>
+            <td title="내용">지도 애니메이션 view</td>
+            <td title="비고"></td>
+        </tr>
+        <tr>
+            <td title="업데이트일자">2022-06-09</td>
+            <td title="파일명"><a href="./html/d3Integration.html" target="_blank">d3Integration.html</a></td>
+            <td title="내용">TopoJSON으로 layer 표현</td>
+            <td title="비고"></td>
+        </tr>
+        <tr>
+            <td title="업데이트일자">2022-06-09</td>
+            <td title="파일명"><a href="./html/CartoDbSourceExample.html" target="_blank">CartoDbSourceExample.html</a></td>
+            <td title="내용">CartoDB에서 select하여 레이어 표출</td>
+            <td title="비고"></td>
+        </tr>
+        <tr>
+            <td title="업데이트일자">2022-06-09</td>
+            <td title="파일명"><a href="./html/DragAndDrop.html" target="_blank">DragAndDrop.html</a></td>
+            <td title="내용"> </td>
+            <td title="비고"></td>
+        </tr>
+        <tr>
+            <td title="업데이트일자">2022-06-09</td>
+            <td title="파일명"><a href="./html/ColorManipulation.html" target="_blank">ColorManipulation.html</a></td>
+            <td title="내용"> </td>
+            <td title="비고"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<script>
+</script>
+</body>
+</html>
