@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Drag-and-Drop (MVT preview)</title>
+    <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+    <script src="https://unpkg.com/elm-pep@1.0.6/dist/elm-pep.js"></script>
+    <!-- The lines below are only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=fetch,requestAnimationFrame,Element.prototype.classList,TextDecoder"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/3.18.3/minified.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/css/ol.css">
+    <style>
+        .map {
+            width: 100%;
+            height:400px;
+        }
+        .tileCoord input {
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+<div id="map" class="map"></div>
+<br />
+<div class="tileCoord">
+    <a id="download" download></a>
+    <span>Tile coordinate&nbsp;&nbsp;</span>
+    <span>&nbsp;z: <input type="number" id="tileCoordZ" value="6" /></span>
+    <span>&nbsp;x: <input type="number" id="tileCoordX" value="30" /></span>
+    <span>&nbsp;y: <input type="number" id="tileCoordY" value="20" /></span>
+    <span>&nbsp;&nbsp;</span>
+    <button id="download-mvt">Download sample</button>
+</div>
+<br />
+<div id="info">&nbsp;</div>
+<script src="../js/CustomDrag-and-Drop(MVTpreview).js"></script>
+</body>
+</html>
