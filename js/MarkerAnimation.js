@@ -134,7 +134,7 @@ fetch('https://openlayers.org/en/latest/examples/data/polyline/route.json').then
         function startAnimation() {
             animating = true;
             lastTime = Date.now();
-            startButton.textContent = 'Stop Animation';
+            startButton.textContent = '멈춤';
             vectorLayer.on('postrender', moveFeature);
             // hide geoMarker and trigger map render through change event
             geoMarker.setGeometry(null);
@@ -142,7 +142,7 @@ fetch('https://openlayers.org/en/latest/examples/data/polyline/route.json').then
 
         function stopAnimation() {
             animating = false;
-            startButton.textContent = 'Start Animation';
+            startButton.textContent = '시작';
 
             // Keep marker at current animation position
             geoMarker.setGeometry(position);

@@ -39,6 +39,6 @@ projectionSelect.addEventListener('change', function (event) {
 
 const precisionInput = document.getElementById('precision');
 precisionInput.addEventListener('change', function (event) {
-    const format = createStringXY(event.target.valueAsNumber);
+    const format = ol.coordinate.createStringXY(event.target.valueAsNumber);
     mousePositionControl.setCoordinateFormat(format);
 });

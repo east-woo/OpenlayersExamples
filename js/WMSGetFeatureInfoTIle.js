@@ -33,7 +33,7 @@ map.on('singleclick', function (evt) {
     const viewResolution = /** @type {number} */ (view.getResolution());
     const url = wmsSource.getFeatureInfoUrl(
         evt.coordinate,//마우스 좌표
-        viewResolution,
+        viewResolution, //해상도
         'EPSG:3857',
         {'INFO_FORMAT': 'text/html'}
     );

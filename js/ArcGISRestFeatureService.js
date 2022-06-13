@@ -78,7 +78,6 @@ const vectorSource = new ol.source.Vector({
             ) +
             '&geometryType=esriGeometryEnvelope&inSR=102100&outFields=*' +
             '&outSR=102100';
-        console.log(url)
         $.ajax({
             url: url,
             dataType: 'jsonp',
