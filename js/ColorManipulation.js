@@ -60,6 +60,7 @@ function rgb2hcl(pixel) {
  * @return {Array<number>} A pixel in RGB space.
  */
 function hcl2rgb(pixel) {
+
     const h = pixel[0];
     const c = pixel[1];
     const l = pixel[2];

@@ -36,6 +36,7 @@ const map = new ol.Map({
 
 const gifUrl = 'https://openlayers.org/en/latest/examples/data/globe.gif';
 const gif = gifler(gifUrl);
+
 gif.frames(
     document.createElement('canvas'),
     function (ctx, frame) {

@@ -49,7 +49,7 @@ fetch('https://openlayers.org/en/latest/examples/data/polyline/route.json').then
     response.json().then(function (result) {
         const polyline = result.routes[0].geometry;
         const route = new ol.format.Polyline({
-            factor: 1e6,
+            factor: 1000000,
         }).readGeometry(polyline, {
             dataProjection: 'EPSG:4326',
             featureProjection: 'EPSG:3857',

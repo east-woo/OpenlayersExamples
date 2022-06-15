@@ -63,7 +63,7 @@ const zoomtolausanne = document.getElementById('zoomtolausanne');
 zoomtolausanne.addEventListener(
     'click',
     function () {
-        const feature = source.getFeatures()[1];
+        const feature = source.getFeatures()[0];
         const point = feature.getGeometry();
         view.fit(point, {padding: [170, 50, 30, 150], minResolution: 50});
     },

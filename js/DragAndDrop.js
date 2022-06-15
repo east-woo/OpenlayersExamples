@@ -116,25 +116,25 @@ function download(fullpath, filename) {
 }
 
 document.getElementById('download-gpx').addEventListener('click', function () {
-    download('data/gpx/fells_loop.gpx', 'fells_loop.gpx');
+    download('https://openlayers.org/en/latest/examples/data/gpx/fells_loop.gpx', 'fells_loop.gpx');
 });
 
 document
     .getElementById('download-geojson')
     .addEventListener('click', function () {
-        download('data/geojson/roads-seoul.geojson', 'roads-seoul.geojson');
+        download('https://openlayers.org/en/latest/examples/data/geojson/roads-seoul.geojson', 'roads-seoul.geojson');
     });
 
 document.getElementById('download-igc').addEventListener('click', function () {
-    download('data/igc/Ulrich-Prinz.igc', 'Ulrich-Prinz.igc');
+    download('https://openlayers.org/en/latest/examples/data/igc/Ulrich-Prinz.igc', 'Ulrich-Prinz.igc');
 });
 
 document.getElementById('download-kml').addEventListener('click', function () {
-    download('data/kml/states.kml', 'states.kml');
+    download('https://openlayers.org/en/latest/examples/data/kml/states.kml', 'states.kml');
 });
 
 document
     .getElementById('download-topojson')
     .addEventListener('click', function () {
-        download('data/topojson/fr-departments.json', 'fr-departments.json');
+        download('https://openlayers.org/en/latest/examples/data/topojson/fr-departments.json', 'fr-departments.json');
     });
